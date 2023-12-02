@@ -84,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="124" y="-17"/>
         </scene>
-        <!--View Controller-->
+        <!--Вопрос №-->
         <scene sceneID="CpE-w3-CGS">
             <objects>
                 <viewController id="Jkk-Zw-TqY" sceneMemberID="viewController">
@@ -94,7 +94,7 @@
                         <viewLayoutGuide key="safeArea" id="1aJ-7v-QYV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fG6-Kx-jjm"/>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="fG6-Kx-jjm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uld-Vf-dKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,8 +120,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NO0-Qi-ro2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="exa-Gq-2g8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="exa-Gq-2g8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
