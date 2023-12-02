@@ -40,10 +40,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CX3-O2-L3m">
+                                <rect key="frame" x="21" y="234.5" width="278.5" height="99.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какое вы животное?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oka-2j-Qpz">
+                                        <rect key="frame" x="0.0" y="0.0" width="278.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27E-sx-LKg">
+                                        <rect key="frame" x="40.5" y="52" width="197.5" height="47.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Начать опрос">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="CX3-O2-L3m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EHu-nw-gtR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="92n-Gx-4Aa" secondAttribute="trailing" constant="20" id="MnU-3Y-skV"/>
                             <constraint firstItem="Ktx-VR-1Ff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PQY-qV-12x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SyW-CD-Wum" secondAttribute="bottom" constant="20" id="PfM-NX-gsQ"/>
@@ -52,6 +71,7 @@
                             <constraint firstItem="dSj-xC-C1D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fen-NY-2Ic"/>
                             <constraint firstItem="dSj-xC-C1D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kZN-MJ-awa"/>
                             <constraint firstItem="92n-Gx-4Aa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dSj-xC-C1D" secondAttribute="trailing" constant="212" id="mO0-vI-g9B"/>
+                            <constraint firstItem="CX3-O2-L3m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nYe-Np-yHh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ktx-VR-1Ff" secondAttribute="bottom" constant="20" id="wus-n2-yeK"/>
                             <constraint firstItem="92n-Gx-4Aa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="yTA-Lh-6fV"/>
                         </constraints>
