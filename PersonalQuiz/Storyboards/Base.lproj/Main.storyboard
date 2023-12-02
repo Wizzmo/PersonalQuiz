@@ -91,8 +91,27 @@
                     <view key="view" contentMode="scaleToFill" id="9oD-5l-etm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ben-nV-CDX">
+                                <rect key="frame" x="0.0" y="92.5" width="320" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsT-oy-jOL">
+                                <rect key="frame" x="16" y="104.5" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1aJ-7v-QYV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ben-nV-CDX" firstAttribute="leading" secondItem="1aJ-7v-QYV" secondAttribute="leading" id="Iey-h9-8vp"/>
+                            <constraint firstItem="GsT-oy-jOL" firstAttribute="leading" secondItem="1aJ-7v-QYV" secondAttribute="leading" constant="16" id="MGp-vs-RxD"/>
+                            <constraint firstItem="ben-nV-CDX" firstAttribute="trailing" secondItem="1aJ-7v-QYV" secondAttribute="trailing" id="Usc-e1-ThV"/>
+                            <constraint firstItem="ben-nV-CDX" firstAttribute="top" secondItem="1aJ-7v-QYV" secondAttribute="top" id="YJi-AQ-Xlk"/>
+                            <constraint firstItem="GsT-oy-jOL" firstAttribute="top" secondItem="ben-nV-CDX" secondAttribute="bottom" constant="8" id="rbD-Hm-LMd"/>
+                            <constraint firstItem="1aJ-7v-QYV" firstAttribute="trailing" secondItem="GsT-oy-jOL" secondAttribute="trailing" constant="16" id="s9m-k6-EcF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="fG6-Kx-jjm"/>
                     <connections>
@@ -101,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uld-Vf-dKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1547" y="-19"/>
+            <point key="canvasLocation" x="1546.875" y="-19.014084507042252"/>
         </scene>
         <!--Результат-->
         <scene sceneID="wCQ-2K-QA6">
@@ -111,8 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="22r-yF-9xg">
-                                <rect key="frame" x="77.5" y="240" width="165.5" height="88.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="22r-yF-9xg">
+                                <rect key="frame" x="77.5" y="236" width="165.5" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы – 🐙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6G-Sc-K9o">
                                         <rect key="frame" x="0.0" y="0.0" width="165.5" height="60"/>
@@ -121,7 +140,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARn-sR-xBF">
-                                        <rect key="frame" x="30.5" y="68" width="104" height="20.5"/>
+                                        <rect key="frame" x="30.5" y="76" width="104" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
