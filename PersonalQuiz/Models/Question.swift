@@ -10,7 +10,7 @@ struct Question {
     let type: ResponseType
     let answer: [Answer]
     
-    func getQuestions() -> [Question] {
+    static func getQuestions() -> [Question] {
         [
             Question(
                 title: "Какую пищу вы предпочитаете?",
