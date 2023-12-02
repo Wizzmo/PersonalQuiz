@@ -101,6 +101,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jkt-AN-Eoq">
+                                <rect key="frame" x="16" y="224" width="288" height="120.5"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dxn-dr-VrE">
+                                        <rect key="frame" x="-2" y="0.0" width="292" height="31"/>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="TwF-WQ-3M9">
+                                        <rect key="frame" x="0.0" y="46" width="288" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJS-hs-I3L">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmY-iz-rpz">
+                                                <rect key="frame" x="205" y="0.0" width="83" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6r-Tw-lIf">
+                                        <rect key="frame" x="0.0" y="82.5" width="288" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="STn-SY-dSK">
                                 <rect key="frame" x="16" y="187" width="288" height="194"/>
                                 <subviews>
@@ -200,18 +232,22 @@
                         <constraints>
                             <constraint firstItem="STn-SY-dSK" firstAttribute="leading" secondItem="1aJ-7v-QYV" secondAttribute="leading" constant="16" id="1FJ-T1-rzg"/>
                             <constraint firstItem="1aJ-7v-QYV" firstAttribute="trailing" secondItem="STn-SY-dSK" secondAttribute="trailing" constant="16" id="1YL-dT-wCf"/>
+                            <constraint firstItem="jkt-AN-Eoq" firstAttribute="centerY" secondItem="9oD-5l-etm" secondAttribute="centerY" id="EV7-Nm-9XB"/>
+                            <constraint firstItem="1aJ-7v-QYV" firstAttribute="trailing" secondItem="jkt-AN-Eoq" secondAttribute="trailing" constant="16" id="Fhv-5R-fvY"/>
                             <constraint firstItem="ben-nV-CDX" firstAttribute="leading" secondItem="1aJ-7v-QYV" secondAttribute="leading" id="Iey-h9-8vp"/>
                             <constraint firstItem="GsT-oy-jOL" firstAttribute="leading" secondItem="1aJ-7v-QYV" secondAttribute="leading" constant="16" id="MGp-vs-RxD"/>
                             <constraint firstItem="dXN-lw-Xs6" firstAttribute="centerY" secondItem="9oD-5l-etm" secondAttribute="centerY" id="PMf-n0-3gP"/>
                             <constraint firstItem="ben-nV-CDX" firstAttribute="trailing" secondItem="1aJ-7v-QYV" secondAttribute="trailing" id="Usc-e1-ThV"/>
                             <constraint firstItem="STn-SY-dSK" firstAttribute="centerY" secondItem="9oD-5l-etm" secondAttribute="centerY" id="Ut8-gK-CWg"/>
                             <constraint firstItem="ben-nV-CDX" firstAttribute="top" secondItem="1aJ-7v-QYV" secondAttribute="top" id="YJi-AQ-Xlk"/>
+                            <constraint firstItem="jkt-AN-Eoq" firstAttribute="leading" secondItem="1aJ-7v-QYV" secondAttribute="leading" constant="16" id="mVI-LT-EUi"/>
                             <constraint firstItem="GsT-oy-jOL" firstAttribute="top" secondItem="ben-nV-CDX" secondAttribute="bottom" constant="8" id="rbD-Hm-LMd"/>
                             <constraint firstItem="1aJ-7v-QYV" firstAttribute="trailing" secondItem="GsT-oy-jOL" secondAttribute="trailing" constant="16" id="s9m-k6-EcF"/>
                             <constraint firstItem="dXN-lw-Xs6" firstAttribute="centerX" secondItem="9oD-5l-etm" secondAttribute="centerX" id="tVo-jg-udw"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="STn-SY-dSK"/>
                                 <exclude reference="dXN-lw-Xs6"/>
                             </mask>
                         </variation>
