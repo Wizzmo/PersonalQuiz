@@ -101,16 +101,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dXN-lw-Xs6">
+                                <rect key="frame" x="122.5" y="191" width="75" height="186"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dZ-ot-1Th">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dio-pY-wmj">
+                                        <rect key="frame" x="0.0" y="50.5" width="75" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LS-5h-XDO">
+                                        <rect key="frame" x="0.0" y="101" width="75" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zve-34-SC0">
+                                        <rect key="frame" x="0.0" y="151.5" width="75" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1aJ-7v-QYV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ben-nV-CDX" firstAttribute="leading" secondItem="1aJ-7v-QYV" secondAttribute="leading" id="Iey-h9-8vp"/>
                             <constraint firstItem="GsT-oy-jOL" firstAttribute="leading" secondItem="1aJ-7v-QYV" secondAttribute="leading" constant="16" id="MGp-vs-RxD"/>
+                            <constraint firstItem="dXN-lw-Xs6" firstAttribute="centerY" secondItem="9oD-5l-etm" secondAttribute="centerY" id="PMf-n0-3gP"/>
                             <constraint firstItem="ben-nV-CDX" firstAttribute="trailing" secondItem="1aJ-7v-QYV" secondAttribute="trailing" id="Usc-e1-ThV"/>
                             <constraint firstItem="ben-nV-CDX" firstAttribute="top" secondItem="1aJ-7v-QYV" secondAttribute="top" id="YJi-AQ-Xlk"/>
                             <constraint firstItem="GsT-oy-jOL" firstAttribute="top" secondItem="ben-nV-CDX" secondAttribute="bottom" constant="8" id="rbD-Hm-LMd"/>
                             <constraint firstItem="1aJ-7v-QYV" firstAttribute="trailing" secondItem="GsT-oy-jOL" secondAttribute="trailing" constant="16" id="s9m-k6-EcF"/>
+                            <constraint firstItem="dXN-lw-Xs6" firstAttribute="centerX" secondItem="9oD-5l-etm" secondAttribute="centerX" id="tVo-jg-udw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="fG6-Kx-jjm"/>
