@@ -95,12 +95,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="fG6-Kx-jjm"/>
+                    <connections>
+                        <segue destination="hZo-7k-uR7" kind="show" id="BQI-JH-TGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uld-Vf-dKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1547" y="-19"/>
         </scene>
-        <!--View Controller-->
+        <!--Результат-->
         <scene sceneID="wCQ-2K-QA6">
             <objects>
                 <viewController id="hZo-7k-uR7" sceneMemberID="viewController">
@@ -110,6 +113,7 @@
                         <viewLayoutGuide key="safeArea" id="lge-nb-BsU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Результат" id="YbP-po-YPY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ktb-Np-1Eb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
