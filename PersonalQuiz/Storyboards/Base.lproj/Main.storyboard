@@ -248,6 +248,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="fG6-Kx-jjm"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="STn-SY-dSK" id="YRY-rP-4LE"/>
+                        <outlet property="questionLabel" destination="GsT-oy-jOL" id="Pbt-bh-Zhb"/>
+                        <outlet property="questionProgressView" destination="ben-nV-CDX" id="4eb-mu-ywY"/>
+                        <outlet property="singleStackView" destination="dXN-lw-Xs6" id="caj-tD-eze"/>
+                        <outletCollection property="singleButtons" destination="7dZ-ot-1Th" collectionClass="NSMutableArray" id="JDU-Rr-Y1c"/>
+                        <outletCollection property="singleButtons" destination="Dio-pY-wmj" collectionClass="NSMutableArray" id="bX2-sh-isI"/>
+                        <outletCollection property="singleButtons" destination="9LS-5h-XDO" collectionClass="NSMutableArray" id="nGH-PV-4dI"/>
+                        <outletCollection property="singleButtons" destination="Zve-34-SC0" collectionClass="NSMutableArray" id="E1t-pb-5oc"/>
+                        <outletCollection property="multipleLabels" destination="9dn-bQ-fqN" collectionClass="NSMutableArray" id="hvS-5l-wTK"/>
+                        <outletCollection property="multipleLabels" destination="KZK-RO-e1q" collectionClass="NSMutableArray" id="z3K-Cz-lUG"/>
+                        <outletCollection property="multipleLabels" destination="LoO-Uj-z5l" collectionClass="NSMutableArray" id="yy6-pi-PHs"/>
+                        <outletCollection property="multipleLabels" destination="3Qj-9w-uSr" collectionClass="NSMutableArray" id="Rki-Fa-WSx"/>
+                        <outletCollection property="multipleSwitches" destination="Mgm-9W-2LO" collectionClass="NSMutableArray" id="xUF-oD-YKb"/>
+                        <outletCollection property="multipleSwitches" destination="dha-qB-1ee" collectionClass="NSMutableArray" id="aZN-I5-SNk"/>
+                        <outletCollection property="multipleSwitches" destination="UZu-yu-QIK" collectionClass="NSMutableArray" id="r0n-ih-fsJ"/>
+                        <outletCollection property="multipleSwitches" destination="95B-xT-3Xa" collectionClass="NSMutableArray" id="uu5-eS-Vxt"/>
                         <segue destination="hZo-7k-uR7" kind="show" id="BQI-JH-TGF"/>
                     </connections>
                 </viewController>

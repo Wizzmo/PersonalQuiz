@@ -24,7 +24,7 @@ struct Question {
             ),
             Question(
                 title: "Что вам нравится больше?",
-                type: .mupliple,
+                type: .mupltiple,
                 answer: [
                     Answer(title: "Плавать", animal: .dog),
                     Answer(title: "Спать", animal: .cat),
@@ -42,14 +42,13 @@ struct Question {
                     Answer(title: "Обожаю", animal: .dog)
                 ]
             )
-            
         ]
     }
 }
 
 enum ResponseType {
     case single
-    case mupliple
+    case mupltiple
     case ranged
 }
 
