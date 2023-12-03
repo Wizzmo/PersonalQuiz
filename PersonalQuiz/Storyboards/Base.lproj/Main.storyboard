@@ -87,7 +87,7 @@
         <!--Вопрос №-->
         <scene sceneID="CpE-w3-CGS">
             <objects>
-                <viewController id="Jkk-Zw-TqY" sceneMemberID="viewController">
+                <viewController id="Jkk-Zw-TqY" customClass="QuestionsViewController" customModule="PersonalQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9oD-5l-etm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,12 +245,6 @@
                             <constraint firstItem="1aJ-7v-QYV" firstAttribute="trailing" secondItem="GsT-oy-jOL" secondAttribute="trailing" constant="16" id="s9m-k6-EcF"/>
                             <constraint firstItem="dXN-lw-Xs6" firstAttribute="centerX" secondItem="9oD-5l-etm" secondAttribute="centerX" id="tVo-jg-udw"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="STn-SY-dSK"/>
-                                <exclude reference="dXN-lw-Xs6"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="fG6-Kx-jjm"/>
                     <connections>
@@ -264,7 +258,7 @@
         <!--Результат-->
         <scene sceneID="wCQ-2K-QA6">
             <objects>
-                <viewController id="hZo-7k-uR7" sceneMemberID="viewController">
+                <viewController id="hZo-7k-uR7" customClass="ResultViewController" customModule="PersonalQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ny-EA-g9A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
