@@ -29,7 +29,16 @@ final class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    @IBAction func singleQuestionButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func multipleQuestionButtonPressed() {
+    }
+    
+    @IBAction func rangedQuestionButtonPressed() {
+    }
+    
 
 }
 
