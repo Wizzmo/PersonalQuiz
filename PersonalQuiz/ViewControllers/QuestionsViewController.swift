@@ -25,6 +25,7 @@ final class QuestionsViewController: UIViewController {
     @IBOutlet var rangedSlider: UISlider!
     
     // MARK: - Private Properties
+    private var questionIndex = 0 // Объявили общий индекс, от которого будем отталкиваться
     private let questions = Question.getQuestions()
     
     // MARK: - View Life Cycle
@@ -51,6 +52,9 @@ private extension QuestionsViewController {
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
             stackView?.isHidden = true
         }
+        
+        // Set navigation title
+        title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
     }
 }
 
