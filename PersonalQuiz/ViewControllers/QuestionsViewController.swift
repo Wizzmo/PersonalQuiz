@@ -36,6 +36,9 @@ final class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        let answersCount = Float(currentAnswers.count - 1)
+        rangedSlider.maximumValue = answersCount
+        rangedSlider.value = answersCount / 2
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -98,7 +101,7 @@ private extension QuestionsViewController {
         switch type {
         case .single: showSingleStackView(with: currentAnswers)
         case .mupltiple: showMultipleStackView(with: currentAnswers)
-        case .ranged: break
+        case .ranged: showRangedStackView(with: currentAnswers)
         }
     }
     
@@ -116,6 +119,13 @@ private extension QuestionsViewController {
         for (label, anser) in zip(multipleLabels, answers) {
             label.text = anser.title
         }
+    }
+    
+    func showRangedStackView(with answers: [Answer]) {
+        rangedStackView.isHidden.toggle()
+        
+        rangedLabels.first?.text = answers.first?.title
+        rangedLabels.last?.text = answers.last?.title
     }
     
     func nextQuestion() {
