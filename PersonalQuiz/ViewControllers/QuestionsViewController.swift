@@ -61,6 +61,12 @@ private extension QuestionsViewController {
         
         // Set current question for label
         questionLabel.text = currentQuestion.title
+        
+        // Calculate progress
+        let totalProgress = Float(questionIndex) / Float(questions.count)
+        
+        // Set progress for progressQuestionView
+        questionProgressView.setProgress(totalProgress, animated: true)
     }
 }
 
