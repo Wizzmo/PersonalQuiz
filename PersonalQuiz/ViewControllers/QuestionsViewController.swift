@@ -28,7 +28,7 @@ final class QuestionsViewController: UIViewController {
     private var questionIndex = 0 // Объявили общий индекс, от которого будем отталкиваться
     private let questions = Question.getQuestions()
     private var answersChosen: [Answer] = []
-    private var answers: [Answer] {
+    private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
     
@@ -45,12 +45,18 @@ final class QuestionsViewController: UIViewController {
     // MARK: - IB Actions
     @IBAction func singleQuestionButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
-        let currentAnswer = answers[buttonIndex]
+        let currentAnswer = currentAnswers[buttonIndex]
         answersChosen.append(currentAnswer)
         nextQuestion()
     }
     
     @IBAction func multipleQuestionButtonPressed() {
+        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
+            if multipleSwitch.isOn {
+                answersChosen.append(answer)
+            }
+        }
+        nextQuestion()
     }
     
     @IBAction func rangedQuestionButtonPressed() {
@@ -90,8 +96,8 @@ private extension QuestionsViewController {
     /// - Parameter type: Specifies the category of response
     func showCurrentAnswers(for type: ResponseType) {
         switch type {
-        case .single: showSingleStackView(with: answers)
-        case .mupltiple: showMultipleStackView(with: answers)
+        case .single: showSingleStackView(with: currentAnswers)
+        case .mupltiple: showMultipleStackView(with: currentAnswers)
         case .ranged: break
         }
     }
