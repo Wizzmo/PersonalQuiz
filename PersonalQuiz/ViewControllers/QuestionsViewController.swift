@@ -27,7 +27,7 @@ final class QuestionsViewController: UIViewController {
     // MARK: - Private Properties
     private var questionIndex = 0 // Объявили общий индекс, от которого будем отталкиваться
     private let questions = Question.getQuestions()
-    private var answersChosen: [Answer] = []
+    private var answersChoosen: [Answer] = []
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
@@ -42,24 +42,22 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let resultsViewController = segue.destination as? ResultViewController else {
-            return
-        }
-        resultsViewController.answersChosen = answersChosen
+        let resultViewController = segue.destination as? ResultViewController
+        resultViewController?.answersChoosen = answersChoosen
     }
     
     // MARK: - IB Actions
     @IBAction func singleQuestionButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[buttonIndex]
-        answersChosen.append(currentAnswer)
+        answersChoosen.append(currentAnswer)
         nextQuestion()
     }
     
     @IBAction func multipleQuestionButtonPressed() {
         for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
             if multipleSwitch.isOn {
-                answersChosen.append(answer)
+                answersChoosen.append(answer)
             }
         }
         nextQuestion()
@@ -67,7 +65,7 @@ final class QuestionsViewController: UIViewController {
     
     @IBAction func rangedQuestionButtonPressed() {
         let index = lrintf(rangedSlider.value)
-        answersChosen.append(currentAnswers[index])
+        answersChoosen.append(currentAnswers[index])
         nextQuestion()
     }
 }
