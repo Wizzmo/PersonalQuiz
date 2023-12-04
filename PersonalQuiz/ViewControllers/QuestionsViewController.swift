@@ -55,6 +55,11 @@ private extension QuestionsViewController {
         
         // Set navigation title
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
+        
+        // Get current question
+        let currentQuestion = questions[questionIndex]
+        
+        
     }
 }
 
