@@ -38,11 +38,15 @@ final class QuestionsViewController: UIViewController {
         updateUI()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
     // MARK: - IB Actions
     @IBAction func singleQuestionButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = answers[buttonIndex]
         answersChosen.append(currentAnswer)
+        nextQuestion()
     }
     
     @IBAction func multipleQuestionButtonPressed() {
@@ -97,6 +101,18 @@ private extension QuestionsViewController {
         for (button, answer) in zip(singleButtons, answers) {
             button.setTitle(answer.title, for: .normal)
         }
+    }
+    
+    func nextQuestion() {
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+            return
+        }
+        // Делаем программный переход
+        performSegue(withIdentifier: "showResult", sender: nil)
+        
     }
 }
 
