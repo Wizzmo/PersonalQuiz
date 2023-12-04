@@ -12,7 +12,7 @@ class ResultViewController: UIViewController {
     @IBOutlet var animalTypeLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
-    var answers: [Answer]!
+    var answersChosen: [Answer]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
