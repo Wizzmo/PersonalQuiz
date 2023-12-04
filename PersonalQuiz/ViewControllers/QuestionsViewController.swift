@@ -8,7 +8,7 @@
 import UIKit
 
 final class QuestionsViewController: UIViewController {
-
+    
     // MARK: - IB Outlets
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionProgressView: UIProgressView!
@@ -30,6 +30,7 @@ final class QuestionsViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
     
     // MARK: - IB Actions
@@ -41,7 +42,15 @@ final class QuestionsViewController: UIViewController {
     
     @IBAction func rangedQuestionButtonPressed() {
     }
+}
     
-
+// MARK: - IB Actions
+private extension QuestionsViewController {
+    func updateUI() {
+        // Hide everything
+        for stackView in [singleStackView, multipleStackView, rangedStackView] {
+            stackView?.isHidden = true
+        }
+    }
 }
 
