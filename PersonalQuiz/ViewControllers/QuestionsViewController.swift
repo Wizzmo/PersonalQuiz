@@ -27,6 +27,9 @@ final class QuestionsViewController: UIViewController {
     // MARK: - Private Properties
     private var questionIndex = 0 // Объявили общий индекс, от которого будем отталкиваться
     private let questions = Question.getQuestions()
+    private var answers: [Answer] {
+        questions[questionIndex].answers
+    }
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -67,6 +70,29 @@ private extension QuestionsViewController {
         
         // Set progress for progressQuestionView
         questionProgressView.setProgress(totalProgress, animated: true)
+        
+        showCurrentAnswers(for: currentQuestion.type)
+    }
+    
+    /// Choise of answers category
+    ///
+    /// Displaying answers to a question according to a category
+    ///
+    /// - Parameter type: Specifies the category of response
+    func showCurrentAnswers(for type: ResponseType) {
+        switch type {
+        case .single: showSingleStackView(with: answers)
+        case .mupltiple: break
+        case .ranged: break
+        }
+    }
+    
+    func showSingleStackView(with answers: [Answer]) {
+        singleStackView.isHidden.toggle()
+        
+        for (button, answer) in zip(singleButtons, answers) {
+            button.setTitle(answer.title, for: .normal)
+        }
     }
 }
 
