@@ -327,7 +327,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="YbP-po-YPY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="a3E-bk-kNE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="a3E-bk-kNE">
+                            <connections>
+                                <action selector="doneButtonAction:" destination="hZo-7k-uR7" id="nEI-Qs-p2H"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ktb-Np-1Eb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
