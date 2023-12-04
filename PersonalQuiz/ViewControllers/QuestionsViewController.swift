@@ -27,6 +27,7 @@ final class QuestionsViewController: UIViewController {
     // MARK: - Private Properties
     private var questionIndex = 0 // Объявили общий индекс, от которого будем отталкиваться
     private let questions = Question.getQuestions()
+    private var answersChosen: [Answer] = []
     private var answers: [Answer] {
         questions[questionIndex].answers
     }
@@ -39,6 +40,9 @@ final class QuestionsViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func singleQuestionButtonPressed(_ sender: UIButton) {
+        guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
+        let currentAnswer = answers[buttonIndex]
+        answersChosen.append(currentAnswer)
     }
     
     @IBAction func multipleQuestionButtonPressed() {
