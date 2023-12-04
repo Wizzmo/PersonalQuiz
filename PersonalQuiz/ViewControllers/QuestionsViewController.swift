@@ -59,7 +59,8 @@ private extension QuestionsViewController {
         // Get current question
         let currentQuestion = questions[questionIndex]
         
-        
+        // Set current question for label
+        questionLabel.text = currentQuestion.title
     }
 }
 
