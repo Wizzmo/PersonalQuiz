@@ -9,6 +9,7 @@ import UIKit
 
 final class QuestionsViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var questionProgressView: UIProgressView!
     
@@ -23,13 +24,15 @@ final class QuestionsViewController: UIViewController {
     @IBOutlet var rangedLabels: [UILabel]!
     @IBOutlet var rangedSlider: UISlider!
     
-    
+    // MARK: - Private Properties
     private let questions = Question.getQuestions()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // MARK: - IB Actions
     @IBAction func singleQuestionButtonPressed(_ sender: UIButton) {
     }
     
