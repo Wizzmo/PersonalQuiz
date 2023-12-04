@@ -39,8 +39,9 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        
     }
+    
     // MARK: - IB Actions
     @IBAction func singleQuestionButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
@@ -90,7 +91,7 @@ private extension QuestionsViewController {
     func showCurrentAnswers(for type: ResponseType) {
         switch type {
         case .single: showSingleStackView(with: answers)
-        case .mupltiple: break
+        case .mupltiple: showMultipleStackView(with: answers)
         case .ranged: break
         }
     }
@@ -100,6 +101,14 @@ private extension QuestionsViewController {
         
         for (button, answer) in zip(singleButtons, answers) {
             button.setTitle(answer.title, for: .normal)
+        }
+    }
+    
+    func showMultipleStackView(with answers: [Answer]) {
+        multipleStackView.isHidden.toggle()
+        
+        for (label, anser) in zip(multipleLabels, answers) {
+            label.text = anser.title
         }
     }
     
