@@ -70,7 +70,7 @@ final class QuestionsViewController: UIViewController {
     }
 }
     
-// MARK: - IB Actions
+// MARK: - Private Methods
 private extension QuestionsViewController {
     func updateUI() {
         // Hide everything

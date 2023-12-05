@@ -13,8 +13,10 @@ final class ResultViewController: UIViewController {
     @IBOutlet var animalTypeLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
+    // MARK: - Private Properties
     var answers: [Answer]!
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,11 +24,13 @@ final class ResultViewController: UIViewController {
         getResult()
     }
     
+    // MARK: - IB Actions
     @IBAction func doneButtonAction(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
 }
 
+// MARK: - Private Methods
 extension ResultViewController {
     
     private func getResult() {
