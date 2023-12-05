@@ -7,17 +7,19 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+final class ResultViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet var animalTypeLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
-    var answersChoosen: [Answer]!
+    var answers: [Answer]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
+        getResult()
     }
     
     @IBAction func doneButtonAction(_ sender: UIBarButtonItem) {
@@ -29,7 +31,7 @@ extension ResultViewController {
     
     private func getResult() {
         var repeatabilityOfAnimals: [Animal: Int] = [:]
-        let animals = answersChoosen.map { $0.animal }
+        let animals = answers.map { $0.animal }
         
         for animal in animals {
             if let animalTypeCount = repeatabilityOfAnimals[animal] {
@@ -41,6 +43,12 @@ extension ResultViewController {
         
         let sortedRepeatabilityOfAnimals = repeatabilityOfAnimals.sorted { $0.value > $1.value }
         guard let mostRepetitiveAnimal = sortedRepeatabilityOfAnimals.first?.key else { return }
+        
+        updateScreen(with: mostRepetitiveAnimal)
     }
     
+    private func updateScreen(with animal: Animal?) {
+        animalTypeLabel.text = "Вы - \(animal?.rawValue ?? "🐙")!"
+        descriptionLabel.text = animal?.definition ?? ""
+    }
 }

@@ -42,8 +42,8 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let resultViewController = segue.destination as? ResultViewController
-        resultViewController?.answersChoosen = answersChoosen
+        guard let resultViewController = segue.destination as? ResultViewController else { return }
+        resultViewController.answers = answersChoosen
     }
     
     // MARK: - IB Actions
@@ -139,6 +139,7 @@ private extension QuestionsViewController {
             updateUI()
             return
         }
+        
         // Делаем программный переход
         performSegue(withIdentifier: "showResult", sender: nil)
         

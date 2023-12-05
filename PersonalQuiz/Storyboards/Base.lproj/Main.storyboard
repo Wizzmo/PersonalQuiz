@@ -286,7 +286,7 @@
                         <outletCollection property="multipleSwitches" destination="95B-xT-3Xa" collectionClass="NSMutableArray" id="uu5-eS-Vxt"/>
                         <outletCollection property="rangedLabels" destination="AJS-hs-I3L" collectionClass="NSMutableArray" id="U7P-bv-2BE"/>
                         <outletCollection property="rangedLabels" destination="dmY-iz-rpz" collectionClass="NSMutableArray" id="2H9-mw-QAo"/>
-                        <segue destination="hZo-7k-uR7" kind="show" id="BQI-JH-TGF"/>
+                        <segue destination="hZo-7k-uR7" kind="show" identifier="showResult" id="BQI-JH-TGF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uld-Vf-dKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -302,16 +302,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="22r-yF-9xg">
-                                <rect key="frame" x="77.5" y="236" width="165.5" height="96.5"/>
+                                <rect key="frame" x="16" y="236" width="288" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы – 🐙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6G-Sc-K9o">
-                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="60"/>
+                                        <rect key="frame" x="61.5" y="0.0" width="165.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARn-sR-xBF">
-                                        <rect key="frame" x="30.5" y="76" width="104" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARn-sR-xBF">
+                                        <rect key="frame" x="92" y="76" width="104" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -322,8 +322,10 @@
                         <viewLayoutGuide key="safeArea" id="lge-nb-BsU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="22r-yF-9xg" firstAttribute="centerY" secondItem="8ny-EA-g9A" secondAttribute="centerY" id="6Nk-8G-HjS"/>
-                            <constraint firstItem="22r-yF-9xg" firstAttribute="centerX" secondItem="8ny-EA-g9A" secondAttribute="centerX" id="sOF-F7-U4K"/>
+                            <constraint firstItem="22r-yF-9xg" firstAttribute="centerY" secondItem="8ny-EA-g9A" secondAttribute="centerY" id="HUs-XW-wpl"/>
+                            <constraint firstItem="22r-yF-9xg" firstAttribute="leading" secondItem="lge-nb-BsU" secondAttribute="leading" constant="16" id="SfH-FW-MzC"/>
+                            <constraint firstItem="22r-yF-9xg" firstAttribute="centerX" secondItem="8ny-EA-g9A" secondAttribute="centerX" id="UAt-PZ-Ets"/>
+                            <constraint firstItem="lge-nb-BsU" firstAttribute="trailing" secondItem="22r-yF-9xg" secondAttribute="trailing" constant="16" id="tvV-iv-co7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="YbP-po-YPY">
